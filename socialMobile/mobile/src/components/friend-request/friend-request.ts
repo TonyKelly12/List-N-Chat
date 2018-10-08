@@ -25,13 +25,7 @@ export class FriendRequestComponent {
 
         this.afAuth.authState.subscribe(user =>{
             this.currentUserID = user.uid
-
-        })
-    }
-    ionViewDidLoad():void {
-        console.log('ionViewDidLoad FriendsListPage');
-
-        this.pendingRequest = this
+            this.pendingRequest = this
             .afStore
             .collection('people')
             .doc(this.currentUserID)
@@ -40,7 +34,10 @@ export class FriendRequestComponent {
             .pendingRequest
             .valueChanges();
         console.log(this.currentUserID);
+
+        })
     }
+    
 
     approve(firendRequestkey, sender):void{
         console.log('approved');

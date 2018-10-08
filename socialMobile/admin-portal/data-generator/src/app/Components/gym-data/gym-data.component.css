@@ -1,0 +1,22 @@
+#gym{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../../../assets/img/athlete-barbell-bodybuilder-949129.jpg');
+    background-size: cover;
+    
+  }
+
+  .jumbotron {
+    background: rgb(51, 57, 59); /* This is for ie8 and below */
+    background: rgba(51, 57, 59, 0.568); 
+ }
+
+ .card{
+    background: rgba(43, 78, 90, 0.781);
+ }
+
+ .list-group-item{
+    background: rgba(51, 57, 59, 0.568);
+    
+ }
+

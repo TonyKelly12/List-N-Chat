@@ -1,0 +1,69 @@
+<div id="teams">
+<h2>Edit Teams</h2>
+<p>Choose a Team in database below</p>
+<div id="accordion">
+  <div *ngFor='let team of teamDBList' class="list-group">
+    <div class="card">
+      <div class="card-header" [attr.id]="'heading' + team.teamID">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" [attr.data-target]="'#collap' + team.teamID" aria-expanded="false"
+            [attr.aria-controls]="'#collap' + team.teamID">
+            Team Id: {{team.teamID}}:
+          </button>
+        </h5>
+      </div>
+
+      <div [attr.id]="'collap' + team.teamID" class="collapse" [attr.aria-labelledby]="'heading' + team.teamID" data-parent="#accordion">
+        <div class="card-body">
+          <li class="list-group-item">
+            <div class="container">
+
+              <div *ngFor="let prop of team.properties">
+
+                <div *ngIf='prop.propertyType != "BOOL"'>
+                  <div class="row align-content-center">
+
+                    <div *ngIf="prop.propertyType == 'PNG' || prop.propertyType == 'JPG'" class="col order-0">
+                      <img src="data:image/png;base64,{{prop.propertyValue}}" class="list-group-item" />
+                    </div>
+
+                    <!-- <div *ngIf="prop.type == 'TXT' && prop.propertyName == 'gym.long_name.txt'" class="col order-1">
+                      <div>
+                        <label>Username: </label>
+                        <span>{{prop.propertyValue}}</span>
+                      </div>
+                    </div> -->
+
+                    <div *ngIf="prop.propertyType == 'TXT' && prop.propertyName == 'team.name.txt'" class="col order-2">
+                      <div>
+                        <label>Team Name: </label>
+                        <span>{{prop.propertyValue}}</span>
+                      </div>
+                    </div>
+                    <div *ngIf="prop.propertyType == 'TXT' && prop.propertyName == 'team.purpose.txt'" class="col order-3">
+                      <div>
+                        <label>Team Purpose: </label>
+                        <span>{{prop.propertyValue}}</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!--Row End Above-->
+                </div>
+
+              </div>
+              <br>
+              <div class="row align-content-center"></div>
+              <span>
+                <button class="btn btn-primary btn-lg" [routerLink]="['/teamEdit', team.teamID ]">Edit</button>
+              </span>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>

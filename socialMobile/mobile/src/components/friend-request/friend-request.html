@@ -1,0 +1,23 @@
+<ion-list>
+
+  <ion-item *ngFor='let request of friendRequest | async'>
+
+    <ion-avatar item-start>
+      <img src="{{request.sender.photoURL}}">
+    </ion-avatar>
+    <h2>{{request.sender.first_name}}</h2>
+
+
+    <button ion-button color="secondary" (click)="approve(request.key , request.sender)">
+      <ion-icon name="person-add"></ion-icon>
+      Approve
+    </button>
+
+
+    <button ion-button color="danger" (click)='deny(request.key, request.sender)'>
+      <ion-icon name="alert"></ion-icon>
+      Deny
+    </button>
+
+  </ion-item>
+</ion-list>

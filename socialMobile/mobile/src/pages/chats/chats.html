@@ -1,0 +1,18 @@
+<ion-header>
+    <nav-bar></nav-bar>
+</ion-header>
+<ion-content>
+    <chat [chatID]="chatID"></chat>
+</ion-content>
+
+<ion-footer no-border [style.height]="showFriendPicker ? '255px' : '55px'">
+    <chat-input
+            (msgEvent)="resizeContent()"
+            (onFocusEvent)="onFocus()"
+            (switchFriendPickerEvent)="switchFriendPicker()"
+            [showFriendPicker]="showFriendPicker"
+            [chatID]="chatID">
+
+    </chat-input>
+    <friend-picker [chatID]="chatID" (friendEvent)="addToChat($event)"></friend-picker>
+</ion-footer>

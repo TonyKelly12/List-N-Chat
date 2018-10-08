@@ -1,0 +1,90 @@
+<div id="gym">
+<h2>
+  Edit Gyms</h2>
+<p>Choose a Gym in database below</p>
+<div id="accordion">
+  <div *ngFor='let gym of gymDBList' class="list-group">
+    <div class="card">
+      <div class="card-header" [attr.id]="'heading' + gym.gymID">
+        <h5 class="mb-0">
+          <button class="btn btn-link" data-toggle="collapse" [attr.data-target]="'#collap' + gym.gymID" aria-expanded="false"
+            [attr.aria-controls]="'#collap' + gym.gymID">
+            User: Id {{gym.gymID}}:
+          </button>
+        </h5>
+      </div>
+
+      <div [attr.id]="'collap' + gym.gymID" class="collapse" [attr.aria-labelledby]="'heading' + gym.gymID" data-parent="#accordion">
+        <div class="card-body">
+          <li class="list-group-item">
+            <div class="container">
+              <div id="info">
+              <div *ngFor="let prop of gym.properties">
+
+                <div *ngIf='prop.type != "BOOL"'>
+                  <div class="row align-content-center">
+
+                    <div *ngIf="prop.type == 'PNG' || prop.type == 'JPG'" class="col order-0">
+                      <img src="data:image/png;base64,{{prop.propertyValue}}" class="list-group-item" />
+                    </div>
+
+                    <!-- <div *ngIf="prop.type == 'TXT' && prop.propertyName == 'gym.long_name.txt'" class="col order-1">
+                      <div>
+                        <label>Username: </label>
+                        <span>{{prop.propertyValue}}</span>
+                      </div>
+                    </div> -->
+
+                    <div *ngIf="prop.type == 'TXT' && prop.propertyName == 'gym.short_name.txt'" class="col order-2">
+                      <div>
+                        <label>Name: </label>
+                        <span>{{prop.propertyValue}}</span>
+                      </div>
+                    </div>
+                    <div *ngIf="prop.type == 'TXT' && prop.propertyName == 'gym.phone_number.txt'" class="col order-3">
+                      <div>
+                        <label>Phone Number: </label>
+                        <span>{{prop.propertyValue}}</span>
+                      </div>
+                    </div>
+
+                    <div *ngIf="prop.type == 'TXT' && prop.propertyName == 'gym.streetAddress.txt'" class="col order-4">
+                      <div>
+                        <label>Street Address: </label>
+                        <span>{{prop.propertyValue}}</span>
+                      </div>
+                    </div>
+                    <div *ngIf="prop.type == 'TXT' && prop.propertyName == 'gym.city.txt'" class="col order-5">
+                      <div>
+                        <label>City: </label>
+                        <span>{{prop.propertyValue}}</span>
+                      </div>
+                    </div>
+                    <div *ngIf="prop.type == 'TXT' && prop.propertyName == 'gym.state.txt'" class="col order-6">
+                      <label>State: </label>
+                      <span>{{prop.propertyValue}}</span>
+                    </div>
+                    <div *ngIf="prop.type == 'TXT' && prop.propertyName == 'gym.zip_code.txt'" class="col order-6">
+                      <label>Zip: </label>
+                      <span>{{prop.propertyValue}}</span>
+                    </div>
+                  </div>
+
+                  <!--Row End Above-->
+                </div>
+
+              </div>
+              <br>
+              <div class="row align-content-center"></div>
+              <span>
+                <button class="btn btn-primary btn-lg" [routerLink]="['/gymEdit', gym.gymID ]">Edit</button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>

@@ -1,0 +1,35 @@
+<ion-card #register>
+    <div id="login-form">
+
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+
+                <form [formGroup]="loginForm">
+                    <div class="form-group">
+                        <label id="formLabel">
+                            Email address
+                            <br>
+                            <input id="emailInput" type="email" formControlName="email" class="form-control">
+                        </label>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label>
+                            Password
+                            <br>
+                            <input id="pwordInput" type="password" class="form-control" formControlName="password">
+                        </label>
+                    </div>
+                    <br>
+                    <button type="submit" ion-button color="primary" (click)="tryLogin(loginForm.value)"
+                            class="login-button btn btn-default">Login
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</ion-card>
+<ion-item *ngIf='errorMessage' class='error'>
+    <ion-icon name='sad' item-start></ion-icon>
+    <ion-label text-wrap>{{errorMessage}}</ion-label>
+</ion-item>

@@ -1,0 +1,72 @@
+<div id="editPerson">
+  <div class="jumbotron">
+<form [formGroup]='personEditForm' (submit)="saveEdit()">
+  <div class="form-group">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <strong>
+            <h1 class="section-title" id="section-title">Edit Person</h1>
+          </strong>
+          <p>Edit User Below</p>
+        </div>
+      </div>
+      
+        
+          
+          <div formArrayName = "properties" *ngFor='let prop of personEditForm.controls.properties.value; let i=index; trackBy:trackByFn' class="list-group row justify-content-center">
+            <div [formGroupName] = 'i'>
+              
+              <div class="col order-0">
+            <div *ngIf="prop.type == 'PNG' || prop.type == 'JPG'" class="form-group  ">
+                
+               <label>{{prop.propertyName}}</label>
+                <!-- <img src="{{prop.propertyValue}}" class="list-group-item" /> -->
+                <img src="data:image/png;base64,{{prop.propertyValue}}" class="list-group-item" />
+              
+              </div> 
+
+            <div *ngIf="prop.type == 'TXT'" class="form-group ">
+               
+              <label>{{prop.propertyName}}</label>
+              <input type="text" class="list-group-item" placeholder="{{prop.propertyValue}}" formControlName ="propertyValue"  />
+            
+            </div>
+
+            <div *ngIf="prop.type == 'DOUBLE'" class="form-group ">
+                
+              <label>{{prop.propertyName}}</label>
+              <input type="text" class="list-group-item" value="{{prop.propertyValue}}" formControlName ="propertyValue"/>
+            
+            </div>
+
+            </div>
+           
+           <!-- end of row -->
+          
+             <div class="col-4 order-1">
+            <div *ngIf="prop.type == 'BOOL'" class="form-group ">
+                
+              <label>{{prop.propertyName}}</label>
+              <input type="checkbox" value="true" formControlName ="propertyValue"/>
+             
+            </div>
+            
+              </div>
+
+            </div>
+
+            </div>
+           
+        
+      </div>
+
+
+
+    
+  </div>
+  <button class="btn btn-primary btn-lg formSubmitButton" type="submit" [disabled]="!personEditForm.valid ">Submit Properties</button>
+      <hr>
+</form>
+</div>
+</div>

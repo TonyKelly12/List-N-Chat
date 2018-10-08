@@ -1,0 +1,36 @@
+
+#home{
+    margin-top: 10px;
+    background-image: url("../../../assets/img/bodybuilding-brawny-determination-700392.jpg") ;
+    background-size: cover;
+    height: 100vh;
+}
+#memberAvatar{
+    margin-left: 3rem;
+    margin-top: 5px;
+    
+}
+#gymAvatar{
+    margin-left: 3rem;
+    
+}
+#teamAvatar{
+    margin-left: 2rem;
+    
+}
+#feedAvatar{
+    margin-left: 3rem;
+    
+}
+#homeCard{
+    background: rgb(51, 57, 59); /* This is for ie8 and below */
+    background: rgba(51, 57, 59, 0.568); 
+    margin-top: 1rem;
+    width: 18rem;
+    height: 22rem;
+    margin-top: 25vh;
+}
+
+.homeAvatar{
+    margin-top: 1px;
+}

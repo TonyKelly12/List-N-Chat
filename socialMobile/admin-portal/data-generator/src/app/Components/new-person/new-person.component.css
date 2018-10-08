@@ -1,0 +1,19 @@
+#new-person{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../../../assets/img/beautiful-beautyrobic-blonde-907826.jpg');
+    background-size: cover;
+    
+   
+    
+  }
+  .jumbotron {
+    background: rgb(51, 57, 59); /* This is for ie8 and below */
+    background: rgba(51, 57, 59, 0.568); 
+    margin-top: 20vh;
+ }
+
+ #section-title{
+     margin-bottom:10vh;
+     margin-left: 15vw;
+ }

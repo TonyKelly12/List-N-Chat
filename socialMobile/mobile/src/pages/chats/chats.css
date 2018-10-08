@@ -1,0 +1,135 @@
+page-chats h2 {
+  color: white; }
+page-chats ion-header {
+  background: linear-gradient(360deg, #3bbed0 0%, #3cd3d9 14%, #d1f6f1 63%); }
+page-chats ion-footer {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.11);
+  background-color: black;
+  height: 255px; }
+page-chats .line-breaker {
+  white-space: pre-line;
+  color: white; }
+page-chats .input-wrap {
+  padding: 5px;
+  display: flex; }
+  page-chats .input-wrap textarea {
+    flex: 1;
+    border: 0;
+    border-bottom: 1px #ad1283;
+    border-style: solid; }
+page-chats .header-wrap {
+  padding: 5px;
+  display: flex; }
+  page-chats .header-wrap ion-card {
+    flex: 1;
+    border: 0;
+    border-bottom: 1px #ad1283;
+    border-style: solid; }
+  page-chats .header-wrap ion-fab[right] {
+    right: 0px; }
+page-chats .message-wrap {
+  padding: 0 10px;
+  padding-top: 25px; }
+  page-chats .message-wrap .message {
+    position: relative;
+    padding: 7px 0; }
+    page-chats .message-wrap .message .user-img {
+      position: absolute;
+      border-radius: 45px;
+      width: 45px;
+      height: 45px;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.36); }
+    page-chats .message-wrap .message .msg-detail {
+      width: 100%;
+      display: inline-block; }
+      page-chats .message-wrap .message .msg-detail p {
+        margin: 0; }
+      page-chats .message-wrap .message .msg-detail .msg-info p {
+        font-size: .8em;
+        color: #fff; }
+      page-chats .message-wrap .message .msg-detail .msg-content {
+        position: relative;
+        margin-top: 5px;
+        border-radius: 5px;
+        padding: 8px;
+        border: 1px solid #ddd;
+        color: #fff;
+        width: auto;
+        max-width: 80%; }
+        page-chats .message-wrap .message .msg-detail .msg-content span.triangle {
+          background-color: #fff;
+          border-radius: 2px;
+          height: 8px;
+          width: 8px;
+          top: 12px;
+          display: block;
+          border-style: solid;
+          border-color: #ddd;
+          border-width: 1px;
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+          position: absolute; }
+  page-chats .message-wrap .message.left .msg-content {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f57505+0,a15401+50,f38f03+100 */
+    background: #f57505;
+    /* Old browsers */
+    background: -moz-linear-gradient(45deg, #f57505 0%, #a15401 50%, #f38f03 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #f57505 0%, #a15401 50%, #f38f03 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #f57505 0%, #a15401 50%, #f38f03 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f57505', endColorstr='#f38f03', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    float: left; }
+  page-chats .message-wrap .message.left .msg-detail {
+    padding-left: 60px; }
+  page-chats .message-wrap .message.left .user-img {
+    left: 0; }
+  page-chats .message-wrap .message.left .msg-content {
+    color: #ffffff; }
+    page-chats .message-wrap .message.left .msg-content span.triangle {
+      border-top-width: 0;
+      border-right-width: 0;
+      left: -5px; }
+  page-chats .message-wrap .message.right .msg-detail {
+    padding-right: 60px; }
+    page-chats .message-wrap .message.right .msg-detail .msg-info {
+      text-align: right; }
+  page-chats .message-wrap .message.right .user-img {
+    right: 0; }
+  page-chats .message-wrap .message.right ion-spinner {
+    position: absolute;
+    right: 10px;
+    top: 50px; }
+  page-chats .message-wrap .message.right .msg-content {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cb60b3+0,ad1283+50,de47ac+100;Pink+3D */
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c337a5+0,940e70+50,d52199+100 */
+    background: #c337a5;
+    /* Old browsers */
+    background: -moz-linear-gradient(45deg, #c337a5 0%, #940e70 50%, #d52199 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #c337a5 0%, #940e70 50%, #d52199 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #c337a5 0%, #940e70 50%, #d52199 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c337a5', endColorstr='#d52199', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    float: right; }
+    page-chats .message-wrap .message.right .msg-content span.triangle {
+      background-color: #ad1283;
+      border-bottom-width: 0;
+      border-left-width: 0;
+      right: -5px; }
+page-chats #message-box {
+  height: 18%;
+  margin-top: 5px; }
+page-chats .card {
+  border-radius: 10%; }
+  page-chats .card h2,
+  page-chats .card p {
+    color: white; }
+page-chats #avatar {
+  display: inline-block; }
+
+/*# sourceMappingURL=chats.css.map */

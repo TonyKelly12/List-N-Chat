@@ -1,0 +1,10 @@
+<ion-fab left>
+    <button ion-fab mini>
+        <ion-icon name="people"></ion-icon>
+    </button>
+    <ion-fab-list>
+        <ion-item *ngFor="let member of chatMembers | async ">
+            <ion-avatar ion-fab><img src="{{member.photoURL}}" alt=""></ion-avatar>
+        </ion-item>
+    </ion-fab-list>
+</ion-fab>

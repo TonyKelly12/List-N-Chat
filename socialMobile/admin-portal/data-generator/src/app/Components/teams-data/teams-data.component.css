@@ -1,0 +1,18 @@
+#teams{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../../../assets/img/active-activity-aerobic-905336.jpg');
+    background-size: cover;
+    
+   
+    
+  }
+
+.card{
+    background: rgba(43, 78, 90, 0.781);
+ }
+
+ .list-group-item{
+    background: rgba(51, 57, 59, 0.568);
+    
+ }

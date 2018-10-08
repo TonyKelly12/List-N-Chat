@@ -1,0 +1,51 @@
+<div style="text-align:center">
+    <h1>
+      Welcome to Jimbot Managers Portal
+        </h1>
+    <!-- <img width="300" alt="Angular Logo" src="../assets/icons/JimBot-No-Bubble.png"> -->
+  </div>
+<div class="container-fluid " id="home">
+    <div class="row justify-content-center">
+      <div class="col-3">
+        <div class="card" id="homeCard">
+          <i class="fas fa-user fa-10x homeAvatar" id="memberAvatar"></i>
+          <div class="card-body">
+            <h5 class="card-title">Members</h5>
+            <p class="card-text">Add, Delete and Edit your memebers</p>
+            <a [routerLink]="['/person']" class="btn btn-primary">Members</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="card" id="homeCard">
+          <i class="fas fa-home fa-10x homeAvatar" id="gymAvatar"></i>
+          <div class="card-body">
+            <h5 class="card-title">Gyms</h5>
+            <p class="card-text">Add, Delete and Edit your gym locations.</p>
+            <a [routerLink]="['/gym']" class="btn btn-primary">Gyms</a>
+          </div>
+        </div>
+      </div>
+    
+        <div class="col-3">
+          <div class="card" id="homeCard">
+            <i class="fas fa-users fa-10x homeAvatar" id="teamAvatar"></i>
+            <div class="card-body">
+              <h5 class="card-title">Teams</h5>
+              <p class="card-text">Add, Delete and Edit teams and thier properties.</p>
+              <a [routerLink]="['/teams']" class="btn btn-primary">Teams</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card" id="homeCard">
+            <i class="fas fa-newspaper fa-10x homeAvatar" id="feedAvatar"></i>
+            <div class="card-body">
+              <h5 class="card-title">Feeds</h5>
+              <p class="card-text">Add, Delete and Edit your gyms feed.</p>
+              <a [routerLink]="['/feed']" class="btn btn-primary">Feeds</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>

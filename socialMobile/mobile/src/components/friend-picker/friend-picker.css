@@ -1,0 +1,111 @@
+/*
+Error: Undefined variable: "$colors".
+        on line 7 of friend-picker.scss
+
+2:     .emoji-picker {
+3:         height: 195px;
+4:         border-top: 1px solid #999;
+5:     .card{
+6:       h1{
+7:         color: color($colors, lightText);
+8:       }
+9:       .item-md{
+10:         background-color: rgba(0, 0, 0, 0);
+11:       }
+12:       position: relative;
+
+Backtrace:
+friend-picker.scss:7
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/script/tree/variable.rb:49:in `_perform'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/script/tree/node.rb:50:in `perform'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/script/tree/funcall.rb:186:in `perform_arg'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/script/tree/funcall.rb:133:in `block in _perform'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/script/tree/funcall.rb:133:in `each'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/script/tree/funcall.rb:133:in `each_with_index'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/script/tree/funcall.rb:133:in `each'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/script/tree/funcall.rb:133:in `map'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/script/tree/funcall.rb:133:in `_perform'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/script/tree/node.rb:50:in `perform'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `map'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `map'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `map'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `map'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:161:in `visit'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `each'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin.rb:82:in `update_stylesheets'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:51:in `process_result'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/exec/base.rb:52:in `parse'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/exec/base.rb:19:in `parse!'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/bin/scss:13:in `<top (required)>'
+C:/RailsInstaller/Ruby2.3.0/bin/scss:22:in `load'
+C:/RailsInstaller/Ruby2.3.0/bin/scss:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$colors\".\A         on line 7 of friend-picker.scss\A \A 2:     .emoji-picker {\A 3:         height: 195px;\A 4:         border-top: 1px solid #999;\A 5:     .card{\A 6:       h1{\A 7:         color: color($colors, lightText);\A 8:       }\A 9:       .item-md{\A 10:         background-color: rgba(0, 0, 0, 0);\A 11:       }\A 12:       position: relative;"; }

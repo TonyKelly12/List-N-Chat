@@ -1,0 +1,55 @@
+<br>
+<div class="row justify-content-center">
+    <div class="col-12 offset-8">
+<h1 id="section-title">
+  Create New Property</h1>
+<br>
+<br>
+</div>
+</div>
+<form [formGroup]='createProperty' (submit)="createNewProperty()">
+  <div class="row justify-content-center">
+  <div class="col-3">
+  <label>Property Name:</label>
+  <br>
+  <input formControlName="propName" type="text" placeholder="Prop Name">
+  <br>
+  <br>
+  
+    <label>Realm Type:</label>
+    <br>
+    <select formControlName="realm" id="realm-type">
+      <option *ngFor="let realm of propRealmType" value="{{realm}}">{{realm}}</option>
+    </select>
+  
+  <br>
+  <br>
+  
+    <label>Property Type:</label>
+    <br>
+    <select formControlName="type" id="property-type">
+      <option *ngFor="let propType of addPropType" value="{{propType}}">{{propType}}</option>
+    </select>
+  
+  <br>
+  <br>
+  
+  <label>Property Description</label>
+  <br>
+  <textarea formControlName="description" class="new-prop__text" placeholder=" describe of your property here"></textarea>
+  </div>
+  <br>
+  <br>
+</div>
+<br>
+  <div class="row justify-content-center">
+    <div class="col-6 offset-3">
+    <button type="submit" class="btn btn-primary btn-lg" role="button" [disabled]="!createProperty.valid || createProperty.untouched" >Add Custom Property Name</button>
+  </div>
+  </div>
+  <br>
+  <br>
+  <br>
+
+
+</form>

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAAW;EACP,gBAAgB,EAAE,OAAO;EACzB,sBAAY;IACR,OAAO,EAAE,GAAG;IACZ,OAAO,EAAE,IAAI;IAEb,+BAAS;MACL,IAAI,EAAE,CAAC;MACP,MAAM,EAAE,CAAC;MACT,aAAa,EAAE,WAAW;MAC1B,YAAY,EAAE,KAAK",
+"sources": ["chat-input.scss"],
+"names": [],
+"file": "chat-input.css"
+}

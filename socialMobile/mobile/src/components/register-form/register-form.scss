@@ -1,0 +1,41 @@
+register-form {
+
+  .card {
+    margin-top: 30vh;
+    background-color: color($colors, lightClrBox);
+    border-radius: 10px;
+    label {
+      color: color($colors, lightText);
+      input {
+        color: black
+      }
+    ;
+    }
+  }
+  .header {
+    text-align: center;
+    font-size: 30px;
+
+  }
+
+  .row {
+    margin-top: 10px;
+  }
+
+  .error {
+    color: red;
+  }
+
+  .success {
+    color: green;
+  }
+
+  #register-form {
+
+    margin-left: 12vw;
+
+  }
+}
+
+#formLabel {
+}

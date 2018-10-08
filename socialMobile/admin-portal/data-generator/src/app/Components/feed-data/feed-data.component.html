@@ -1,0 +1,74 @@
+<p>works</p>
+
+<!-- <div id="header" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-2">
+  
+      </div>
+      <div class="col-sm-8">
+        <h1 class="light-text">Feed Creator</h1>
+      </div>
+      <div class="col-sm-2">
+        <form id="file-form">
+          <label class="btn btn-primary" for="my-file-selector">
+            <input id="my-file-selector" type="file" style="display:none;" (change)=" handleFiles($event);"> Choose File
+          </label>
+          <a class="help" (click)="openModal('helpModal')" href="#">Help</a>
+          <span class='label label-info' id="upload-file-info"></span>
+        </form>
+  
+      </div>
+    </div>
+  </div>
+  
+  <div id="banner-area" class="container-fluid">
+    <div class="jumbotron">
+      <h1 id="section-title">Initial Feed Instance</h1>
+      <p>Then Click Which Gym You want to Load</p>
+      <br>
+      <br>
+      <form #personPropsForm="ngForm" (submit)="userProperties(personPropsForm)">
+        <div class="form-group">
+          <div class="container">
+            <div class="row">
+              <div *ngFor='let option of profileOptions '>
+                <div class="col">
+  
+                  <br>
+                  <input class="propInput" type="radio" name="profileOptions" [(ngModel)]=" person.profilevisibility" value="{{option}}">
+                  <p>Feed Name and Info</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-lg formSubmitButton" type="submit">Submit Properties</button>
+        <br>
+        <br>
+        <hr>
+      </form>
+      <strong>
+        <h1 id="section-title">Get All Feeds in Database</h1>
+      </strong>
+      <br>
+      <br>
+      <p>
+        <a (click)="personService.getPersonsData()" class="btn btn-primary btn-lg getPersonButton" role="button"> Get All People</a>
+      </p>
+      <br>
+      <br>
+      <form #deleteGymsForm="ngForm" (submit)="userProperties(deleteGymsForm)">
+          <div class="form-group">
+              <div class="col">
+                  <h3 id="person-lastName">Feed ID You Want To Delete {{person.lastName}} </h3>
+                  <input class="propInput" type="text" name="deleteGymID" [(ngModel)]=" person.lastName" placeholder="GymID">
+                  <br>
+                </div>
+      <br>
+      <br>
+      <p>
+        <a (click)="personService.getPersonsData()" class="btn btn-danger btn-lg getPersonButton" role="button"> Delete A Gym</a>
+      </p>
+  </div>
+  </form>
+   -->

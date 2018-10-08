@@ -1,0 +1,46 @@
+<div id="new-person">
+    
+<div class="container">
+
+
+  <br>
+  <div class="row justify-content-center">
+    
+  </div>
+  <br>
+  <br>
+  <div class="jumbotron">
+    <h1 id="section-title">Register A New Member</h1>
+  <div id="newPersonForm">
+  <form [formGroup]='createPersonForm' (submit)="createNewPerson()">
+    <div class="row justify-content-center">
+      <div class="initValue col">
+
+        <strong>Email</strong>
+        <input type="text" formControlName="email" id="person-email" />
+        <br>
+      </div>
+      <div class="initValue col">
+        <strong>Password</strong>
+        <input type="password" formControlName="password" id="person-password" />
+        <br>
+      </div>
+      <div class="initValue col">
+        <strong> Phone Number</strong>
+        <input type="text" formControlName="phone" id="person-phoneNumber" />
+        <br>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div>
+      <p>
+        <button type="submit" [disabled]="!createPersonForm.valid || createPersonForm.untouched" class="btn btn-primary btn-lg postPersonButton"
+          role="button">Create New User</button>
+      </p>
+    </div>
+  </form>
+  </div>
+</div>
+</div>
+</div>

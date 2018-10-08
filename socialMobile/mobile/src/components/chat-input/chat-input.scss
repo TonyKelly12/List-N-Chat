@@ -1,0 +1,18 @@
+chat-input {
+  background-color: color($colors, lightClrBox);
+    .input-wrap {
+        padding: 5px;
+        display: flex;
+      background-color: color($colors, clrTextBox);
+      border-radius: 15%;
+
+        textarea {
+          background: rgba(76, 175, 80, 0);
+          color: color($colors, lightText);
+            flex: 1;
+            border: 0;
+            border-bottom: 1px #ad1283;
+            border-style: solid;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+page-register .background {
+  background-image: url("../../assets/register-background.png");
+  background-size: cover; }
+page-register #logo {
+  width: 50%;
+  height: 60%;
+  margin-left: 23vw;
+  margin-top: 8%;
+  margin-bottom: -8%; }
+
+/*# sourceMappingURL=register.css.map */

@@ -1,0 +1,27 @@
+#login{
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../../../assets/img/barbells-dumbbells-equipment-669584.jpg');
+  background-size: cover;
+  
+}
+.header{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+    
+  }
+  
+  .row{
+    margin-top: 10px;
+  }
+  
+  .error{
+    color: red;
+  }
+
+   #login-form{
+     margin-top: 20vh; 
+     margin-left: 30vw;
+    
+  } 

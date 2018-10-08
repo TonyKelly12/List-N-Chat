@@ -1,0 +1,10 @@
+<ion-list >
+  <ion-item *ngFor = 'let invite of displayInvites '>
+    <ion-avatar item-start>
+      <img src="{{invite.photoURL}}">
+    </ion-avatar>
+    <h2>{{invite.username}}</h2>
+    <p>{{invite.email}}</p>
+    <button type="button" ion-button color="secondary" (click)="inviteUser(invite)" class="btn btn-block">Add To Friends List</button>
+  </ion-item>
+</ion-list>

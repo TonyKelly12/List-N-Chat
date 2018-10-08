@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<base href="http://jimbotcentral.com:8080/gatekeeper/">
+  <head>
+	<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+	<meta charset="UTF-8">
+	<title>Upload to REST</title>
+  </head>
+  
+  <body>
+	Upload for PROPERTY NAMES
+	<input type="file" name="file" id="file">
+	<p>
+	Upload for PERSON INSTANCES
+	<input type="file" name="instance" id="instance">
+	<p>
+	TEST BUTTON
+	<button onclick="myFunction()" name = "bla" id = "bla">Click me</button>
+	
+	<!--Used just to display whatever I need for debugging.-->
+	<h1 id = "debug">Hello World!</h1>
+	<h2 id = "test">Bye!</h2>
+  </body>
+
+  <!-- What needs to be done? 
+ --disable-web-security --user-data-dir
+Currently, this needs to be added to the end of your Google Chrome shortcut. (including that space in front)
+Properties > shortcut, and it should be somewhere there.
+This was to get around CORS errors before the server had its side of the requestheaders set.
+I don't know if it works without it now, but you can go ahead and try.
+
+As for the program itself, there are three buttons. You can ignore the 3rd, that was just for testing.
+First one is for property names (person.likessport.bool and things like that) (This one works fine, unless there is a comma.).
+Second one is for the person themselves. This one is a bit iffyier.
+
+Previously, the person instance had 6 arrays. This had been cut down to 3. (email, password, and phone number)
+Right now, the numbers for the arrays correspond to their spots in the (old) csv file.
+This will need to be updated once a new one is made.
+
+What needs to be done for the person instance:
+1. Send the data (done)
+2. Read the response BODY (done)
+3. Grab the person ID in the response body and use it in the url for posting the person properties (Not done)
+	3a. http://jimbotcentral.com:8080/gatekeeper/rest/v1/persons/personID/properties/person.foo.bar is about what it will look like.
+	3b. Go onto http://jimbotcentral.com:8080/gatekeeper/#/Person_Properties for a better look.
+4. Post the person properties using that url (about the same 1... Don't know where my code for it went though.)
+	4a. The CSV file is already split by row, so you just have to read until the end of the row and store each property.
+
+Sorry for the mess.
+  -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+	document.getElementById('bla').onclick = function() //This isn't attached to anything and can be ignored
+	{		
+		$.get('http://jimbotcentral.com:8080/gatekeeper/rest/v1/properties?startIndex=0&maxResults=100', function(responseText) {
+			control.log(responseText);
+   			alert(responseText);
+		});
+	}
+</script>
+
+
+<script>
+	function myFunction(){
+			let req=new XMLHttpRequest();			
+				req.open('POST', "http://jimbotcentral.com:8080/gatekeeper/rest/v1/persons/new", true);
+				req.setRequestHeader("Content-Type","application/json");
+				req.setRequestHeader('Access-Control-Allow-Methods', 'POST');				
+				req.setRequestHeader('Access-Control-Allow-Origin', '*');	
+				req.setRequestHeader('Access-Control-Allow-Headers','x-requested-with');	
+				req.setRequestHeader('Access-Control-Allow-Headers', 'Origin, Accept, Content-Type, Access-Control-Allow-Origin');
+				req.setRequestHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With', 'Content-Type')
+				req.open("POST","http://jimbotcentral.com:8080/gatekeeper/rest/v1/persons/new", true)
+
+				//This is about what the data being sent should look like.
+				let jsonData = '{'+				
+					'"email": "email@email.com",'+						
+					'"phone": "(111)111-1111",'+						
+					'"password": "secret"'+
+				'}';
+				req.send(jsonData);				
+	}
+</script>
+
+
+
+<script>//This script is for person instances specifically.
+document.getElementById('instance').onchange = function () {
+	
+			let file = this.files[0];
+			let reader = new FileReader();
+	
+			reader.onload = function (progressEvent) {
+				//Read file by lines (rows)
+				let lines = this.result.split('\n');
+	
+				// Instantiate arrays (arrays of each column)
+				let emailArray = [];//0
+				let passwordArray = [];//1
+				let phoneArray = [];//4
+	
+				// Loop through CSV for each line
+				// Copy values to arrays above
+				for (let line = 0; line < lines.length; line++) {
+					//split by rowcell
+					let values = lines[line].split(',');//I think passwords with commas in them will mess up.
+					emailArray.push(values[0]);
+					passwordArray.push(values[1]);
+					phoneArray.push(values[4]);
+				}
+	
+				// Loop through number of entries
+				// Turn arrays into JSON object
+				// POST json obj to API
+				for (let line = 0; line < phoneArray.length; line++) {
+					let req = new XMLHttpRequest();
+					req.open("POST", "http://jimbotcentral.com:8080/gatekeeper/rest/v1/persons/new");
+					req.setRequestHeader("Content-Type", "application/json");
+					let newPerson = '{'+
+						'email: '+emailArray[line]+','+
+						'password: '+passwordArray[line]+','+
+						'phone: '+phoneArray[line]+
+					'}';
+					// Debug
+					console.log(newPerson);
+					req.send(newPerson);
+					console.log(XMLHttpRequest.responseText); //responseText is how you read the Response Body
+
+					//START HERE
+
+
+
+
+
+
+				}				
+			}; //end of person instance reader
+			reader.readAsText(file);
+		};
+</script>
+
+
+
+<script>//Property names and descriptions specifically
+document.getElementById('file').onchange = function()
+{
+	let file = this.files[0];
+	let reader = new FileReader();
+
+	reader.onload = function(progressEvent)
+	{
+		//Read file by lines (rows)
+		let lines = this.result.split('\n');
+
+		for(var line = 0; line < lines.length; line++)
+		{
+			let xhttp = new XMLHttpRequest(); 
+			console.log(lines[line]);
+			let PropertyName = lines[line].substr(0, lines[line].indexOf(',')); //Property names can still be split by comma
+			let Description = lines[line].split(',').pop();		//The Description, however, may have commas and problems will ensue.
+			Description = Description.split(' ').join("%20");
+			let address = "http://jimbotcentral.com:8080/gatekeeper/rest/v1/properties/"+PropertyName+"?description="+Description;
+
+			//POST url
+			xhttp.open('POST', address, true);
+			xhttp.setRequestHeader('Access-Control-Allow-Methods', 'POST');
+			xhttp.setRequestHeader('Access-Control-Allow-Headers','x-requested-with');
+			xhttp.setRequestHeader('Access-Control-Allow-Origin', "http://jimbotcentral.com:8080/gatekeeper");
+			xhttp.setRequestHeader('Access-Control-Allow-Headers', 'Origin, Accept, Content-Type, Access-Control-Allow-Origin');	     
+			xhttp.setRequestHeader('Content-Type', 'application/json');
+			xhttp.setRequestHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With', 'Content-Type')
+			xhttp.open("POST",address, true)
+			xhttp.send();
+		}	
+	};
+	reader.readAsText(file);
+};
+</script>
+</html>

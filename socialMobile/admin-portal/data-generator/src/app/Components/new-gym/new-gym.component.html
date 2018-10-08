@@ -1,0 +1,65 @@
+<div id="newGym">
+<div class="container">
+  <div class="jumbotron">
+  <br>
+  <div class="row justify-content-center">
+    <h1 id="section-title">Add a new Gym Location</h1>
+  </div>
+  <br>
+  <br>
+  <form [formGroup]='createGymForm' (submit)="createNewGym()">
+    <div class="row justify-content-center">
+      <div class="initValue col">
+
+        <strong>Gyms Full Name</strong>
+        <input type="text" formControlName="longName" id="gym-longName" />
+        <br>
+      </div>
+      <div class="initValue col">
+        <strong>Gyms Short/Nickname</strong>
+        <input type="text" formControlName="shortName" id="gym-shorName" />
+        <br>
+      </div>
+      <div class="initValue col">
+        <strong> Phone Number</strong>
+        <input type="text" formControlName="phoneNumber" id="gym-phoneNumber" />
+        <br>
+      </div>
+      <div class="initValue col">
+        <strong> Street Address</strong>
+        <input type="text" formControlName="streetAddress" id="gym-streetAddress" />
+        <br>
+      </div>
+      <div class="initValue col">
+        <strong> City</strong>
+        <input type="text" formControlName="city" id="gym-city" />
+        <br>
+      </div>
+      <div class="initValue col">
+        <strong> State</strong>
+        <input type="text" formControlName="state" id="gym-state" />
+        <br>
+      </div>
+      <div class="initValue col">
+        <strong>Zip Code</strong>
+        <input type="text" formControlName="zipCode" id="gym-zipCode"/>
+        <br>
+      </div>
+      <div class="initValue col">
+        <strong> Country</strong>
+        <input type="text" formControlName="country" id="gym-streetAddress" />
+        <br>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div>
+      <p>
+        <button type="submit" [disabled]="!createGymForm.valid || createGymForm.untouched" class="btn btn-primary btn-lg postPersonButton"
+          role="button">Create New User</button>
+      </p>
+    </div>
+  </form>
+</div>
+</div>
+</div>

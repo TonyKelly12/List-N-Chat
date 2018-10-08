@@ -1,0 +1,28 @@
+ .has-error{
+    color: red;
+    word-wrap: break-word
+} 
+
+#person-page{
+    background-image: url("../../../assets/img/active-beautiful-beauty-866027.jpg")  ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+ 
+}
+
+
+.jumbotron {
+    background: rgb(51, 57, 59); /* This is for ie8 and below */
+    background: rgba(51, 57, 59, 0.568); 
+ }
+
+ .card{
+    background: rgba(43, 78, 90, 0.781);
+ }
+
+ .list-group-item{
+    background: rgba(51, 57, 59, 0.568);
+    
+ }

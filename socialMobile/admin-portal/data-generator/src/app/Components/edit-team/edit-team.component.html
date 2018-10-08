@@ -1,0 +1,72 @@
+<div id="editTeam">
+
+  <form [formGroup]='teamEditForm' (submit)="saveEdit()">
+    <div class="form-group">
+      <div class="container">
+        <div class="jumbotron">
+          <div class="row">
+            <div class="col">
+              <strong>
+                <h1 class="section-title" id="section-title">Edit Team</h1>
+              </strong>
+              <p>Edit Team Below</p>
+            </div>
+          </div>
+
+          <div formArrayName="properties" *ngFor='let prop of teamEditForm.controls.properties.value; let i=index; trackBy:trackByFn'
+            class="list-group row justify-content-center">
+            <div [formGroupName]='i'>
+
+              <div class="col order-0">
+                <div *ngIf="prop.propertyType == 'PNG' || prop.propertyType == 'JPG'" class="form-group  ">
+
+                  <label>{{prop.propertyName}}</label>
+                  <img src="{{prop.propertyValue}}" class="list-group-item" />
+                  <img src="data:image/png;base64,{{prop.propertyValue}}" class="list-group-item" />
+
+                </div>
+
+                <div *ngIf="prop.propertyType == 'TXT'" class="form-group ">
+
+                  <label>{{prop.propertyName}}</label>
+                  <input type="text" class="list-group-item" placeholder="{{prop.propertyValue}}" formControlName="propertyValue" />
+
+                </div>
+
+                <div *ngIf="prop.propertyType == 'DOUBLE'" class="form-group ">
+
+                  <label>{{prop.propertyName}}</label>
+                  <input type="text" class="list-group-item" value="{{prop.propertyValue}}" formControlName="propertyValue" />
+
+                </div>
+
+              </div>
+
+              <!-- end of row -->
+
+              <div class="col-4 order-1">
+                <div *ngIf="prop.propertyType == 'BOOL'" class="form-group ">
+
+                  <label>{{prop.propertyName}}</label>
+                  <input type="checkbox" value="true" formControlName="propertyValue" />
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+          <hr>
+          <button class="btn btn-primary btn-lg formSubmitButton" type="submit" [disabled]="!teamEditForm.valid ">Submit Properties</button>
+            
+
+        </div>
+
+
+
+      </div>
+    </div>
+    
+  </form>
+</div>

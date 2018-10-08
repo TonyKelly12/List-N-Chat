@@ -1,0 +1,23 @@
+<ion-content padding class="register-background">
+    <div id="register">
+        <div class="container-fluid">
+            <!-- Observables must be asyncPiped -->
+            <ng-container>
+
+                <register-form></register-form>
+                <div class="row">
+                    <span> <google-login></google-login></span>
+                    <span><facebook-login></facebook-login></span>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4">
+                        <p>Already have an account?
+                            <a (click)='loginPage()'>Login</a>
+                        </p>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</ion-content>

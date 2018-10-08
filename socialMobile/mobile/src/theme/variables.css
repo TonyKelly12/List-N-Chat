@@ -1,0 +1,61 @@
+/*
+Error: File to import not found or unreadable: ionic.globals.
+        on line 13 of variables.scss
+
+8: // The app direction is used to include
+9: // rtl styles in your app. For more info, please see:
+10: // http://ionicframework.com/docs/theming/rtl-support/
+11: $app-direction: ltr;
+12: 
+13: @import "ionic.globals";
+14: 
+15: // Shared Variables
+16: // --------------------------------------------------
+17: // To customize the look and feel of this app, you can override
+18: // the Sass variables found in Ionic's source scss files.
+
+Backtrace:
+variables.scss:13
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/import_node.rb:67:in `rescue in import'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/import_node.rb:45:in `import'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/import_node.rb:28:in `imported_file'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/import_node.rb:37:in `css_import?'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:161:in `visit'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `each'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin.rb:82:in `update_stylesheets'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:51:in `process_result'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/exec/base.rb:52:in `parse'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/exec/base.rb:19:in `parse!'
+C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/sass-3.5.3/bin/scss:13:in `<top (required)>'
+C:/RailsInstaller/Ruby2.3.0/bin/scss:22:in `load'
+C:/RailsInstaller/Ruby2.3.0/bin/scss:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: ionic.globals.\A         on line 13 of variables.scss\A \A 8: // The app direction is used to include\A 9: // rtl styles in your app. For more info, please see:\A 10: // http://ionicframework.com/docs/theming/rtl-support/\A 11: $app-direction: ltr;\A 12: \A 13: @import \"ionic.globals\";\A 14: \A 15: // Shared Variables\A 16: // --------------------------------------------------\A 17: // To customize the look and feel of this app, you can override\A 18: // the Sass variables found in Ionic's source scss files."; }

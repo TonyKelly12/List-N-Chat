@@ -1,0 +1,294 @@
+<br>
+<div id="header" class="container-fluid" id="person-page">
+  <div class="row">
+    <div class="col-sm-8">
+
+      <p>
+        <span>
+          <button>
+            <a href='/person' (click)='CSVDownload({ filename: "personsBackup.csv" });'>Download CSV</a>
+          </button>
+        </span>
+        Download Copy of people in database
+        <strong>*Warning will cause page to reload*</strong>
+      </p>
+    
+
+    <!-- <div class="col-sm-2">
+      <form id="file-form">
+        <label class="btn btn-primary" for="my-file-selector">
+          <input id="my-file-selector" type="file" style="display:none;" (change)=" handleFiles($event);"> Choose File
+        </label>
+        <a class="help" (click)="openModal('helpModal')" href="#">Help</a>
+        <span class='label label-info' id="upload-file-info"></span>
+      </form>
+
+    </div> -->
+  </div>
+</div>
+
+<div id="banner-area" class="container-fluid">
+  <div class="jumbotron">
+
+    <form [formGroup]='personForm' (submit)="userProperties()">
+      <div class="form-group">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-5">
+              <strong>
+                <h1 class="section-title" id="section-title">New User Profile</h1>
+              </strong>
+              <p>Enter new members profile information</p>
+            </div>
+          </div>
+
+          <label for="exampleFormControlSelect1">Select New User Below</label>
+          <div [ngClass]="{'has-error':personForm.get('userID').errors && personForm.get('userID').touched}">
+            <select formControlName="userID" class="form-control" id="exampleFormControlSelect1">
+              <option *ngFor='let initPerson of initPersonArray' value="{{initPerson.personID}}">User ID: {{initPerson.personID}} - {{initPerson.email}} </option>
+            </select>
+          </div>
+          <span>
+            {{Error.userIDError}}
+          </span>
+          <!-- avatar -->
+          <div class="row">
+            <div class="col-4 align-self-start" id="avatar">
+              <br>
+              <strong id="section-title">Avatar </strong>
+              <br>
+              <input type="file" id="file" formControlName="avatar" (change)="this.setAvatar($event)" onchange="document.getElementById('preview').src = window.URL.createObjectURL(this.files[0])">
+              <br>
+              <br>
+              <img id="preview" width="306" height="322" />
+            </div>
+            <br>
+            <br>
+            <!--form-->
+            <div class="col-8 align-self-center">
+              <!-- username row -->
+              <div class="row align-items-center">
+                <div class="col-4">
+                  <div id="username">
+                    <div [ngClass]="{'has-error':personForm.get('username').errors && personForm.get('username').touched}">
+                      <label>Username</label>
+                      <br>
+                      <input class="propInput" type="text" formControlName="username">
+                    </div>
+                    <span>
+                      {{Error.usernameError}}
+                    </span>
+                  </div>
+                </div>
+
+                <!-- end of username row -->
+                <br>
+                <!-- first & last name row -->
+
+                <div class="col-4">
+                  <div id="firstName">
+                    <div [ngClass]="{'has-error':personForm.get('firstname').errors && personForm.get('firstname').touched}">
+
+                      <label id="person-firstName">First Name</label>
+                      <br>
+                      <input class="propInput" type="text" formControlName="firstname">
+                      <br>
+                    </div>
+                    <span>
+                      {{Error.firstNameError}}
+                    </span>
+                  </div>
+                </div>
+                <br>
+                <div class="col-4">
+                  <div id="lastName">
+                    <div [ngClass]="{'has-error':personForm.get('lastname').errors && personForm.get('lastname').touched}">
+
+                      <label id="person-lastName">Last Name</label>
+                      <br>
+                      <input class="propInput" type="text" formControlName="lastname">
+
+                    </div>
+                    <span>
+                      {{Error.lastNameError}}
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              <!-- weight and height row -->
+              <div class="row">
+                <div class="col-4">
+                  <div id="weight">
+                    <div [ngClass]="{'has-error':personForm.get('weight_in_kg').errors && personForm.get('weight_in_kg').touched}">
+
+                      <label>Weight</label>
+                      <br>
+                      <input class="propInput" type="text" formControlName="weight_in_kg">
+                      <span>
+                        {{Error.weightError}}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-4">
+                  <div id="height">
+                    <div [ngClass]="{'has-error':personForm.get('height_in_cm').errors && personForm.get('height_in_cm').touched}">
+                      <label>Height</label>
+                      <br>
+                      <input class="propInput" type="text" formControlName="height_in_cm">
+                    </div>
+                    <span>
+                      {{Error.heightError}}
+                    </span>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div [ngClass]="{'has-error':personForm.get('favoritequote').errors}">
+
+                    <strong>Favorite Quote </strong>
+                    <br>
+                    <textarea class="propInput" type="text" formControlName="favoritequote">
+                      {{person.favoritequote}}
+                    </textarea>
+                  </div>
+                  <span>
+                    {{Error.favQuoteError}}
+                  </span>
+                </div>
+                <br>
+                <br>
+                <div class="row justify-content-center">
+                  <br>
+                  <p>*Required</p>
+                  <div *ngFor='let option of profileOptions '>
+                    <div class="col">
+
+                      <br>
+                      <input class="propInput" type="radio" formControlName="profilevisibility" value='{{option}}'>
+                      <strong>Profile set to {{option}}</strong>
+                    </div>
+                    <span>
+                      {{Error.profileError}}
+                    </span>
+                  </div>
+                  <br>
+                  <!-- end of row -->
+                </div>
+
+                <!-- end height and weight of row -->
+              </div>
+              <!-- end of form coloum -->
+            </div>
+
+            <!-- end of row -->
+          </div>
+          <br>
+          <br>
+          <br>
+          <div class="row justify-content-center">
+            <div class="col-6">
+              <button class="btn btn-primary btn-lg formSubmitButton" type="submit" [disabled]="!personForm.valid || personForm.untouched">Submit Properties</button>
+            </div>
+          </div>
+          <!-- end of container -->
+        </div>
+        <br>
+      </div>
+
+      <hr>
+      <br>
+      <br>
+    </form>
+
+    <h2>Edit Person</h2>
+    <p>Choose person in database below</p>
+    <div id="accordion">
+      <div *ngFor='let person of editPersonArray' class="list-group">
+        <div class="card">
+          <div class="card-header" [attr.id]="'heading' + person.personID">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" [attr.data-target]="'#collap' + person.personID" aria-expanded="false"
+                [attr.aria-controls]="'#collap' + person.personID">
+                User: Id {{person.personID}}: Email: {{person.email}}
+              </button>
+            </h5>
+          </div>
+
+          <div [attr.id]="'collap' + person.personID" class="collapse" [attr.aria-labelledby]="'heading' + person.personID" data-parent="#accordion">
+            <div class="card-body">
+              <li class="list-group-item">
+                <div class="container" id="card-body">
+
+                  <div *ngFor="let prop of person.properties">
+
+                    <div *ngIf='prop.type != "BOOL"'>
+                      <div class="row align-content-center">
+
+                        <div *ngIf="prop.type == 'PNG' || prop.type == 'JPG'" class="col order-0">
+                            <img src="data:image/png;base64,{{prop.propertyValue}}" class="list-group-item" />
+                        </div>
+
+                        <div *ngIf="prop.type == 'TXT' && prop.propertyName == 'person.username.txt'" class="col order-1">
+                          <div>
+                            <label>Username: </label>
+                            <span>{{prop.propertyValue}}</span>
+                          </div>
+                        </div>
+
+                        <div *ngIf="prop.type == 'TXT' && prop.propertyName == 'person.firstname.txt'" class="col order-2">
+                          <div>
+                            <label>First Name: </label>
+                            <span>{{prop.propertyValue}}</span>
+                          </div>
+                        </div>
+                        <div *ngIf="prop.type == 'TXT' && prop.propertyName == 'person.lastname.txt'" class="col order-3">
+                          <div>
+                            <label>Last Name: </label>
+                            <span>{{prop.propertyValue}}</span>
+                          </div>
+                        </div>
+
+                        <div *ngIf="prop.type == 'DOUBLE' && prop.propertyName == 'person.weight_in_kg.double'" class="col order-4">
+                          <div>
+                            <label>Weight: </label>
+                            <span>{{prop.propertyValue}}</span>
+                          </div>
+                        </div>
+                        <div *ngIf="prop.type == 'DOUBLE' && prop.propertyName == 'person.height_in_cm.double'" class="col order-5">
+                          <div>
+                            <label>Height: </label>
+                            <span>{{prop.propertyValue}}</span>
+                          </div>
+                        </div>
+                        <div *ngIf="prop.type == 'TXT' && prop.propertyName == 'person.profilevisibility.txt'" class="col order-6">
+                          <div>
+
+                            <span> This profile is Set To
+                              <strong>{{prop.propertyValue}}</strong> visibility </span>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <!--Row End Above-->
+                    </div>
+
+                  </div>
+                  <br>
+                  <div class="row align-content-center"></div>
+                  <span>
+                    <button class="btn btn-primary btn-lg" [routerLink]="['/personEdit', person.personID ]">Edit</button>
+                  </span>
+                </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

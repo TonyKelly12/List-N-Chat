@@ -1,0 +1,153 @@
+<div class="pos-f-t">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <div class="row">
+        <div class="col">
+          <h2>
+            <a [routerLink]="['/person']">Manage Member Data</a>
+          </h2>
+        </div>
+        <div class="col">
+          <h2>
+            <a [routerLink]="['/gym']">Manage Gym Data</a>
+          </h2>
+        </div>
+        <div class="col">
+          <h2>
+            <a [routerLink]="['/teams']">Manage Teams</a>
+          </h2>
+        </div>
+        <!-- <div class="col">
+          <h2>
+            <a [routerLink]="['/feed']">Manage Feed Data</a>
+          </h2>
+        </div> -->
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div *ngIf="getNavState() == 'home'">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link "[routerLink]="['/']">Logout</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link "[routerLink]="['/']">Settings</a>
+        </li>
+        
+      </ul>
+
+
+    </div>
+
+    <div *ngIf="getNavState() == 'editPerson'">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/home']">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/newPerson']">Register New Member</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " [routerLink]="['/newPersonProperty']">Create New Properties</a>
+        </li>
+      </ul>
+
+
+    </div>
+
+    <div *ngIf="getNavState() == 'registerPerson'">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/home']">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/person']">Edit Members</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " [routerLink]="['/newPersonProperty']">Create New Properties</a>
+        </li>
+      </ul>
+
+
+    </div>
+
+    <div *ngIf="getNavState() == 'createProp'">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/home']">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/person']">Edit Members</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/newPerson']">Register New Member</a>
+        </li>
+      </ul>
+
+    </div>
+
+    <div *ngIf="getNavState() == 'gyms'">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/home']">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/newGym']">Add Gym</a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div *ngIf="getNavState() == 'newGym'">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/']">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/gym']">Edit Gym</a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div *ngIf="getNavState() == 'editGym'">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/']">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/newGym']">Add Gym</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/gym']">Edit Gym</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/']">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/newPerson']">Register New Member</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/person']">Edit Members</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " [routerLink]="['/newPersonProperty']">Create New Properties</a>
+        </li>
+      </ul> -->
+
+  </nav>
+</div>

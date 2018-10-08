@@ -1,0 +1,46 @@
+<div class="container">
+  <br>
+  <div class="row justify-content-center">
+    <h1 id="section-title">Register A New Team</h1>
+  </div>
+  <br>
+  <br>
+  <form [formGroup]='createTeamsForm' (submit)="createNewTeam()">
+    <div class="row justify-content-center">
+      <div class="initValue col">
+
+        <strong>Team Name</strong>
+        <input type="text" formControlName="teamName" id="teamName" />
+        <br>
+      </div>
+      <div class="initValue col">
+        <strong>Brief Team Description</strong>
+          <textarea type="text" formControlName="teamPurpose" id="person-password"></textarea>
+          <br>
+      </div>
+      <div class="initValue col">
+        <strong> Name your news Feed</strong>
+        <input type="text" formControlName="feedName" id="feedName" />
+        <br>
+      </div>
+      <div class="initValue col">
+        <strong>Brief Feed Description</strong>
+          <textarea type="text" formControlName="feedPurpose" id="feedPurpose"></textarea>
+          <br>
+      </div>
+      <div class="initValue col">
+        <strong>Context ID</strong>
+          <input type="text" formControlName="contextID" id="contextID" />
+          <br>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div>
+      <p>
+        <button type="submit" [disabled]="!createTeamsForm.valid || createTeamsForm.untouched" class="btn btn-primary btn-lg postPersonButton"
+          role="button">Create New User</button>
+      </p>
+    </div>
+  </form>
+</div>

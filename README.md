@@ -92,9 +92,19 @@ make sure that your phone is plugged in via USB, and then type one of the folloi
 You can choose any number of editors to develop Typescript/Angular/Ionic code. However, it is HIGHLY recommended that you choose one of Atom or Visual Studio Code.
 
 # Feature List
+ - [x] Firebase Setup
+ - [x] Register User Accounts
+ - [x] Login / Logout
+ - [x] Google Login
+ - [x] Facebook Login
+ - [ ] Twitter Login
  - [x] Friend Request System
+ - [x] Push Notifications
+ - [x] Toast Messages
  - [x] Single Chat
  - [x] Group Chat
+ - [x] Chat Member Display
+ - [x] Adding Friend To Groupchat
  - [ ] Online Status
  - [ ] Blocking Users
  - [ ] Profile Editing
@@ -111,8 +121,11 @@ You can choose any number of editors to develop Typescript/Angular/Ionic code. H
  - [ ] Firebase Setup
  - [ ] Npm and Package install
  - [ ] Register Page
- = [ ] Firebase Cloud Functions Overview
+ - [ ] Firebase Cloud Functions Overview
  - [ ] Login Page
+ - [ ] Google Login
+ - [ ] Facebook Login
+ - [ ] Twitter Login
  - [ ] Role Based Login Option
  - [ ] Angular Routing
  - [ ] Routing Guards
@@ -122,6 +135,8 @@ You can choose any number of editors to develop Typescript/Angular/Ionic code. H
  - [ ] Invite List
  - [ ] Friend Request Cloud Functions
  - [ ] Sending Friend Request
+ - [ ] Push Notifications
+ - [ ] Toast Messages
  - [ ] Approving Friend Request
  - [ ] Friends List
  - [ ] Planning Chat System

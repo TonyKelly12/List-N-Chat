@@ -77,34 +77,4 @@ make sure that your phone is plugged in via USB, and then type one of the folloi
 # Editor
 You can choose any number of editors to develop Typescript/Angular/Ionic code. However, it is HIGHLY recommended that you choose one of Atom or Visual Studio Code.
 
-# How to deploy so that Google Fit works on Android Phones
-In order for the app to communicate properly with the Google Fitness API, you need to provide the SHA1 sum of the certificate used for signing your application to Google. This will enable the GoogleFit plugin to communicate with the Fit application in each smartphone where the application is installed.
 
-## Steps to Deploy
-
--Create a project in the Google code console
-
--Search and enable the "Fitness API"
-
--Then Credentials → Create new client ID → Installed application
-
--If this is the first time you configure the project you should now "Configure the consent screen" where you can add details about your app and then save it for future uses
-
--Now go to "installed application" and select Android
-
--You need to specify the package name (As in the "config.xml" of the Cordova project, under the id property of )
-
--For the SHA1 signature, go to the folder where you have stored your keystore file and invoke the keytool -v -list -alias <PUT_ALIAS_HERE> -keystore <NAME_OF_KEYSTORE_FILE> -storepass -keypass
-
--In case of the default debug key the folder is "".android" in your home directory (both Windows and Linux/Mac users) and Execute:
-keytool -v -list -alias androiddebugkey -keystore debug.keystore -storepass android -keypass android
-If you want to generate your own keystore:
-keytool -genkey -v -keystore APPNAME.keystore -alias APPNAME -keyalg RSA -keysize 2048 -validity 10000
-You can now see the SHA1 signature of the debug keystore like
-
-- Now go back to the API console website, copy the SHA1 signature, press on "create client ID"
-
-- In order to use it in Cordova, put the keystore file in ./platforms/android/ and then add a file named ant.properties in the same folder with these two lines:
-
-key.store=APPNAME.keystore
-key.alias=APPNAME

@@ -2,11 +2,14 @@
 
 https://youtu.be/uT0sNpiAKnM
  
- # Welcome to List-N-CHat
+ # Welcome to List-N-Chat
   This Repo is intendended to be the final repo for this the List-N-Chat video tutorial series that will be published on 
   https://www.coded-colors.com
-   Features will be added to the Feature List below and as feature are completed will be marked off.
-   
+  Features will be added to the Feature List below and as feature are completed will be marked off.
+ 
+ ## Want To Practice You Refactoring Skills
+ Part of the this tutorial series on https://www.coded-colors.com will go over a real world situation of getting on a job and having to read and refactor someone's code. As part of this section I created a spaghetti coded version of this app. If you would like to test your refactoring skills check the bad version of this app at https://github.com/TonyKelly12/ChatDemo-Bad-Code . Setup instructions are included in the repo.
+ 
 # How to get up and running as quickly as possible
 
 ## Setting up Development Environment
@@ -98,4 +101,46 @@ You can choose any number of editors to develop Typescript/Angular/Ionic code. H
  - [ ] Chat Like Button
  - [ ] Home Screen Dashboard
 
+# Video Tutorials to be completed
+ - [ ] Introduction
+ - [x] Lazy Loading
+ - [ ] Setting up Java Key Tool
+ - [ ] Java Heep Error fix
+ - [ ] Visual Studio Tips And Typescript setup
+ - [ ] Planning and Data Structure Decessions
+ - [ ] Firebase Setup
+ - [ ] Npm and Package install
+ - [ ] Register Page
+ = [ ] Firebase Cloud Functions Overview
+ - [ ] Login Page
+ - [ ] Role Based Login Option
+ - [ ] Angular Routing
+ - [ ] Routing Guards
+ - [ ] Logout
+ - [ ] Home Page And Nav Menu
+ - [ ] Planing Friends System
+ - [ ] Invite List
+ - [ ] Friend Request Cloud Functions
+ - [ ] Sending Friend Request
+ - [ ] Approving Friend Request
+ - [ ] Friends List
+ - [ ] Planning Chat System
+ - [ ] Firebase Cloud Chat Functions
+ - [ ] Chat Layout
+ - [ ] Creating a Chat
+ - [ ] Add Message
+ - [ ] Pulling and Ordering Messages
+ - [ ] Reliative Time Pipe
+ - [ ] Chat Toast Messages
+ - [ ] Opening Correct Chat 
+ - [ ] Delete Messages
+ - [ ] Adding Member To Chat
+ - [ ] Chat Member Display
+ - [ ] Online Status
+ - [ ] Removing member from group chat
+ - [ ] Blocking Friends
+ - [ ] Profile Setup
+ 
+ -
+ 
 

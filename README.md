@@ -7,7 +7,7 @@ https://youtu.be/uT0sNpiAKnM
   https://www.coded-colors.com
   Features will be added to the Feature List below and as feature are completed will be marked off.
  
- ## Want To Practice You Refactoring Skills
+ ## Want To Practice Your Refactoring Skills
  Part of the this tutorial series on https://www.coded-colors.com will go over a real world situation of getting on a job and having to read and refactor someone's code. As part of this section I created a spaghetti coded version of this app. If you would like to test your refactoring skills check the bad version of this app at https://github.com/TonyKelly12/ChatDemo-Bad-Code . Setup instructions are included in the repo.
  
 # How to get up and running as quickly as possible

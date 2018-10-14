@@ -150,6 +150,7 @@ You can choose any number of editors to develop Typescript/Angular/Ionic code. H
  - [ ] Opening Correct Chat 
  - [ ] Delete Messages
  - [ ] Adding Member To Chat
+ - [ ] Adding NGRX and state management
  - [ ] Chat Member Display
  - [ ] Online Status
  - [ ] Removing member from group chat
